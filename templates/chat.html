@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Chat App</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Real-Time Chat App</h1>
+
+    <div id="messages"></div>
+
+    <input type="text"
+           id="message"
+           placeholder="Type message...">
+
+    <button onclick="sendMessage()">
+        Send
+    </button>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

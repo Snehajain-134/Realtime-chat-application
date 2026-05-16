@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Advanced Chat App</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <h2>Chat App</h2>
+
+        <input type="text"
+               id="username"
+               placeholder="Your name">
+
+        <button onclick="joinGroup()">
+            Join Group
+        </button>
+
+        <button onclick="openPrivateChat()">
+            Personal Chat
+        </button>
+
+        <div class="users">
+
+            <h3>Members</h3>
+
+            <ul id="memberList">
+                <li>Sneha</li>
+                <li>Rahul</li>
+                <li>Aman</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Chat Area -->
+    <div class="chat-area">
+
+        <div class="header">
+            Group Chat Room
+        </div>
+
+        <div id="messages" class="messages"></div>
+
+        <div class="input-area">
+
+            <input type="text"
+                   id="message"
+                   placeholder="Type message">
+
+            <button onclick="sendMessage()">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
